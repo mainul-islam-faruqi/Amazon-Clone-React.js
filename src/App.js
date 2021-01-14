@@ -32,6 +32,7 @@ function App() {
           type: "SET_USER",
           user: null
         })
+        console.log(authUser)
       }
     })
   },[])
