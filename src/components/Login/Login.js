@@ -24,6 +24,10 @@ const Login = () => {
         .then((auth) => {
             // it successfully create new user with email and password
             console.log(auth);
+            if (auth) {
+                history.push('/')
+                alert(" Account Successfully Created! ")
+            }
         })
         .catch(error => alert(error.message))
     }
