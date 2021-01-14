@@ -15,6 +15,18 @@ const Login = () => {
         .then(auth=> history.push('/'))
         .catch(error => alert(error.message))
     }
+
+    const register = (e) => {
+        e.preventDefault();
+
+        // here do some fancy firebase stuff
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+            // it successfully create new user with email and password
+            console.log(auth);
+        })
+        .catch(error => alert(error.message))
+    }
     return (
         <div className="login">
             <Link to='/'>
@@ -38,10 +50,10 @@ const Login = () => {
                     </button>
 
                     <p>
-                        By signing-in you agree to Amazon's Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+                        By signing-in you agree to Amazon's CLONE Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                     </p>
 
-                    <button className="login__registerButton"> Create your Amazon Account </button>
+                    <button onClick={register} className="login__registerButton"> Create your Amazon Account </button>
 
                 </form>
             </div>
