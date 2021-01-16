@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/Header/Header';
 import {
   BrowserRouter as Router,
@@ -11,6 +11,7 @@ import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
 import {auth} from './components/Login/firebase';
 import { useStateValue } from './StateProvider';
+import Payment from './components/Payment/Payment';
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
               <Route path='/checkout'>
                 <Header/>
                 <Checkout/>
+              </Route>
+              <Route path='/payment'>
+                <Header/>
+                <Payment/>
               </Route>
               <Route path='/'>
                 <Header/>
