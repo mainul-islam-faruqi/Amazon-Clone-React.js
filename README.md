@@ -7,7 +7,20 @@
 * selected item list and remove the item to the cart & count price with reducer
 * Check out functionality with stripe
 
-## Technology: React.js, Material-ui, ES6, React Router, Html, CSS, Firebase
+## Technology: 
+*React.js
+*Material-ui
+*React Router 
+*Context API like Redux
+*Firebase-Authentication
+*Firebase-Firestore
+*Cloud Functions
+*Node.js
+*Express.js
+*Stripe
+*Html
+*CSS
+
 
 <!-- Stripe Functionality -->
 <!-- App.js file 2. payment.js  -->
