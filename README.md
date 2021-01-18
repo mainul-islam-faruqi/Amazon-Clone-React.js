@@ -8,3 +8,6 @@
 * Check out functionality with stripe
 
 ## Technology: React.js, Material-ui, ES6, React Router, Html, CSS, Firebase
+
+<!-- Stripe Functionality -->
+<!-- App.js file 2. payment.js  -->
