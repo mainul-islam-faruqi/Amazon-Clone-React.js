@@ -8,18 +8,18 @@
 * Check out functionality with stripe
 
 ## Technology: 
-*React.js
-*Material-ui
-*React Router 
-*Context API like Redux
-*Firebase-Authentication
-*Firebase-Firestore
-*Cloud Functions
-*Node.js
-*Express.js
-*Stripe
-*Html
-*CSS
+* React.js
+* Material-ui
+* React Router 
+* Context API like Redux
+* Firebase-Authentication
+* Firebase-Firestore
+* Firebase Cloud Functions
+* Node.js
+* Express.js
+* Stripe
+* Html
+* CSS
 
 
 <!-- Stripe Functionality -->
