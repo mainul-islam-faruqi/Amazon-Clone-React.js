@@ -9,6 +9,7 @@
 * Stripe payment system
 * Using firebase cloud function, Express.js to create payment
 * Saving cart to the firebase firestore
+* Order page for the ordered Product from the firestore
 
 ## Technology:                                    
 * React.js
