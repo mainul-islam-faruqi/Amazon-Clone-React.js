@@ -13,14 +13,17 @@
 ## Technology:                                    
 * React.js
 * Material-ui
-* React Router 
+* React Router
 * Context API like Redux
+* axios
 * Firebase-Authentication
 * Firebase-Firestore
 * Firebase Cloud Functions
 * Node.js / Express.js
 * HTML / CSS
 * Stripe Payment System
+* React Flip move
+
 
 
 

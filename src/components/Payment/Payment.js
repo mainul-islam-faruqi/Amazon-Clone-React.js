@@ -36,21 +36,57 @@ const Payment = () => {
         getClientSecret();
     }, [basket])
 
-    console.log("The secret is >>>>", clientSecret);
+    console.log("The secret is >>>> ", clientSecret);
 
+    // const handleSubmit = async event => {
+    //     // do somthing fancy stripe stuff
+    //     event.preventDefault();
+    //     setProcessing(true);
+
+    //     // setClientSecret("pi_1IBMnsL2Eb4HEaVe1mXyQsMy_secret_cXRNqDeGm4sYNBQ0oIMnDpsM9")
+    //     const payload = await stripe.confirmCardPayment(clientSecret, {
+    //         payment_method: {
+    //             card: elements.getElement(CardElement)
+    //         }
+    //     }).then(({paymentIntent}) => {
+    //         // paymentIntent = payment confirmation
+
+    //         db.collection('users')
+    //         .doc(user?.uid)
+    //         .collection('orders')
+    //         .doc(paymentIntent.id)
+    //         .set({
+    //             basket: basket,
+    //             amount: paymentIntent.amount,
+    //             created: paymentIntent.created
+    //         })
+
+    //         setSucceeded(true);
+    //         setError(null)
+    //         setProcessing(false)
+
+    //         dispatch({
+    //             type: 'EMPTY_BASKET'
+    //         })
+
+    //         history.replace('/orders')
+    //     })
+    // }
+
+    // This is temporary bcz my card is not available and so my backend firebase cloud function is not working
+    // so I saved this file to the database directly
     const handleSubmit = async event => {
         // do somthing fancy stripe stuff
         event.preventDefault();
         setProcessing(true);
 
-        const payload = await stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: elements.getElement(CardElement)
-            }
-        }).then(({paymentIntent}) => {
-            // paymentIntent = payment confirmation
+        const paymentIntent = {
+            id: "pi_1IB1piL2Eb4HEaVedlWGkhhw",
+            amount: getBasketTotal(basket) * 100,
+            created: new Date()
+        }
 
-            db.collection('users')
+        db.collection('users')
             .doc(user?.uid)
             .collection('orders')
             .doc(paymentIntent.id)
@@ -69,7 +105,8 @@ const Payment = () => {
             })
 
             history.replace('/orders')
-        })
+
+       
     }
     const handleChange = event => {
         // Listen for changes in the CardElement
