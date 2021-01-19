@@ -2,10 +2,13 @@
 ### Amazon Clone Live Link: https://nifty-visvesvaraya-e8d8ba.netlify.app/
 
 ## Overview: 
-* Created add to cart, count selected cart item with reducer
+* Created add to cart, count selected cart item
 * Google sign in method with firebase & designed with CSS
-* selected item list and remove the item to the cart & count price with reducer
-* Check out functionality with stripe
+* Selected product list and remove the product from cart
+* Counting price with react-currency-format
+* Stripe payment system
+* Using firebase cloud function, Express.js to create payment
+* Saving cart to the firebase firestore
 
 ## Technology:                                    
 * React.js
